@@ -1,33 +1,42 @@
 
-import Camera from 'react-native-camera';
+import { RNCamera } from 'react-native-camera';
 import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
   View,
+  TouchableOpacity
 } from 'react-native';
+import { Button } from 'react-native-elements';
 
 export default class RegistrarPersona extends Component {
   render() {
     return (
-      <View style={styles.container}>
         <View style={styles.preview}>
-          <Camera ref={ref => { this.camera = ref;}}
+          <RNCamera ref={ref => { this.camera = ref;}}
                 style = {styles.preview}
                 permissionDialogTitle={'Permission to use camera'}
                 permissionDialogMessage={'We need your permission to use your camera phone'}
                 onGoogleVisionBarcodesDetected={({ barcodes }) => {
-                console.log(barcodes)}}>
-            <Text style={styles.capture} 
-            onPress={this.takePicture.bind(this)}> [CAPTURE] </Text>
-          </Camera>
+                console.log(barcodes)}}/>
+      <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
+        <TouchableOpacity
+            onPress={this.takePicture.bind(this)}
+            style = {styles.capture}>
+            <Text style={{fontSize: 14}}> SNAP </Text>
+        </TouchableOpacity>
         </View>
       </View>
     );
   }
-  takePicture() {
-     this.camera.capture().then((data) => console.log(data)) .catch(err => console.error(err));
-     }
+
+  takePicture = async function() {
+    if (this.camera) {
+      const options = { quality: 0.5, base64: true };
+      const data = await this.camera.takePictureAsync(options)
+      console.log(data.uri);
+    }
+  };
 }
 
 const styles = StyleSheet.create({
