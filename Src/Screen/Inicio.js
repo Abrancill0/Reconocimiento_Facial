@@ -32,7 +32,7 @@ import {Hoshi} from 'react-native-textinput-effects';
           </View>
          
           <Button title='Entrar' borderRadius={5} 
-          onPress={() => this.props.navigation.navigate('Registro')}/>
+          onPress={() => this.props.navigation.navigate('App')}/>
         </ScrollView>
       );
     }

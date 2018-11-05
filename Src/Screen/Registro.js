@@ -9,10 +9,11 @@
 import React, {Component} from 'react';
 import {StyleSheet, View,Alert} from 'react-native';
 import { Button } from 'react-native-elements';
+import RegistrarSalida from './RegistrarSalida'
 
 import {createTabNavigator} from 'react-navigation';
 
-class Registro extends Component {
+export default class Registro extends Component {
   
   render() {
     return (
@@ -25,7 +26,8 @@ class Registro extends Component {
         
          </View>
          <View style={styles.Box1}>
-         <Button title='Registrar Entrada' borderRadius={5}/>
+         <Button title='Registrar Entrada' borderRadius={5}
+         onPress={() => this.props.navigation.navigate('RegistrarEntrada')}/>
          </View>
          <View style={styles.Box1}>
          <Button title='Registrar Salida' borderRadius={5}
@@ -59,49 +61,6 @@ class Registro extends Component {
   });
     }
 }
-
-class Rutas extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-      
-      </View>
-    );
-  }
-}
-
-class Registros extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-
-      </View>
-    );
-  }
-}
-
-export default createTabNavigator(
-  {
-      Registro: { screen: Registro },
-      Rutas:{ screen: Rutas },
-      Registros:{ screen: Registros },
-  },
-  {
-      tabBarPosition:'top',
-      tabBarOptions: {
-          activeTintColor: 'black',
-          labelStyle: {
-            fontSize: 16,
-          },
-          activeBackgroundColor:'blue',
-          showIcon:true,
-          style: {
-                  backgroundColor: 'white',
-                  height:35,
-                  marginTop:50
-              }
-          }
-  })
 
 const styles = StyleSheet.create({
   container: {
