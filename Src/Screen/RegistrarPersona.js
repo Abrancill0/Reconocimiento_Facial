@@ -5,10 +5,9 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
 } from 'react-native';
 
-export default class CapturarModelo extends Component {
+export default class RegistrarPersona extends Component {
   render() {
     return (
       <View style={styles.container}>

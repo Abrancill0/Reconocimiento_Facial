@@ -19,11 +19,8 @@ export default class Registro extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.Box1}>
-       
          <Button title='Capturar Modelo' borderRadius={5}
-         onPress={this.CapturarModelo.bind(this)}
-         />
-        
+         onPress={() => this.props.navigation.navigate('RegistrarPersona')}/>
          </View>
          <View style={styles.Box1}>
          <Button title='Registrar Entrada' borderRadius={5}
@@ -37,7 +34,7 @@ export default class Registro extends Component {
     );
   }
 
-  CapturarModelo = async () =>{
+  CM1 = async () =>{
    fetch('https://api.kairos.com/enroll', {
     method:'POST',
     headers:{
