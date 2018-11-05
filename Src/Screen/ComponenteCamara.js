@@ -1,67 +1,83 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import React,{Component} from 'react';
+import { Dimensions, Alert, StyleSheet, ActivityIndicator } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 
-      export default class CapturarModelo extends Component {
-        render() {
-          return (
-            <View style={styles.container}>
-            <RNCamera
-                ref={ref => {
-                  this.camera = ref;
-                }}
-                style = {styles.preview}
-                type={RNCamera.Constants.Type.back}
-                flashMode={RNCamera.Constants.FlashMode.on}
-                permissionDialogTitle={'Permission to use camera'}
-                permissionDialogMessage={'We need your permission to use your camera phone'}
-                onGoogleVisionBarcodesDetected={({ barcodes }) => {
-                  console.log(barcodes)
-                }}
-            />
-            <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
-            <TouchableOpacity
-                onPress={this.takePicture.bind(this)}
-                style = {styles.capture}>
-                <Text style={{fontSize: 14}}> SNAP </Text>
-            </TouchableOpacity>
-            </View>
-          </View>
-        );
-      }
-      
-      takePicture = async function() {
+import CaptureButton from './CaptureButton.js'
+
+export default class ComponenteCamara extends Component {
+    constructor(props){
+        super(props);
+        this.state = { 
+            identifedAs: '',
+            loading: false
+        }
+    }
+
+    takePicture = async function(){
+
         if (this.camera) {
-          const options = { quality: 0.5, base64: true };
-          const data = await this.camera.takePictureAsync(options)
-          console.log(data.uri);
+
+            // Pause the camera's preview
+            this.camera.pausePreview();
+
+            // Set the activity indicator
+            this.setState((previousState, props) => ({
+                loading: true
+            }));
+
+            // Set options
+            const options = {
+                base64: true
+            };
+
+            // Get the base64 version of the image
+            const data = await this.camera.takePictureAsync(options)
+            console.warn(data);
+            // Get the identified image
+           // this.identifyImage(data.base64);
         }
-      };
-      }
-      
-      const styles = StyleSheet.create({
-        container: {
-          flex: 1,
-          flexDirection: 'column',
-          backgroundColor: 'black'
-        },
-        preview: {
-          flex: 1,
-          justifyContent: 'flex-end',
-          alignItems: 'center'
-        },
-        capture: {
-          flex: 0,
-          backgroundColor: '#fff',
-          borderRadius: 5,
-          padding: 15,
-          paddingHorizontal: 20,
-          alignSelf: 'center',
-          margin: 20
-        }
-      });
+    }
+
+    displayAnswer(identifiedImage){
+
+        // Dismiss the acitivty indicator
+        this.setState((prevState, props) => ({
+            identifedAs:identifiedImage,
+            loading:false
+        }));
+
+    // Show an alert with the answer on
+    Alert.alert(
+            this.state.identifedAs,
+            '',
+            { cancelable: false }
+        )
+
+        // Resume the preview
+        this.camera.resumePreview();
+    }
+
+    render() {
+        return (
+            <RNCamera ref={ref => {this.camera = ref;}} style={styles.preview}>
+            <ActivityIndicator size="large" style={styles.loadingIndicator} color="#fff" animating={this.state.loading}/>
+            <CaptureButton buttonDisabled={this.state.loading} onClick={this.takePicture.bind(this)}/>
+            </RNCamera>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    preview: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        height: Dimensions.get('window').height,
+        width: Dimensions.get('window').width,
+    },
+    loadingIndicator: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+});
