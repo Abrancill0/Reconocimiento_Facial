@@ -1,4 +1,4 @@
-package com.rf;
+package com.reconocimiento_facial;
 
 import android.app.Application;
 
