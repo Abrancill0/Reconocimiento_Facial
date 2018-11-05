@@ -5,8 +5,6 @@
  * @format
  * @flow
  */
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import Inicio from './Src/Screen/Inicio.js'
 import Registro from './Src/Screen/Registro.js'
 import Rutas from './Src/Screen/Rutas.js';
@@ -34,7 +32,7 @@ const TabBar = createTabNavigator(
 {
   Registro:{screen:Registro},
   Rutas:{screen:Rutas},
-  Registros:{screen:Registros}
+  Registros:{screen:Registros}},{initialRouteName:'Registro'
 })
 
 const stackNavigatorPrincipal = createStackNavigator(
