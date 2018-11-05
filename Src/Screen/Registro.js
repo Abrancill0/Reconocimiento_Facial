@@ -19,7 +19,7 @@ class Registro extends Component {
       <View style={styles.container}>
         <View style={styles.Box1}>
          <Button title='Capturar Modelo' borderRadius={5}
-         onPress={() => this.props.navigation.navigate('CapturarModelo')}/>
+         onPress={() => this.props.navigation.navigate('RegistrarPersona')}/>
          </View>
          <View style={styles.Box1}>
          <Button title='Registrar Entrada' borderRadius={5}/>
@@ -32,7 +32,7 @@ class Registro extends Component {
     );
   }
 
-  CapturarModelo = async () =>{
+  CM1 = async () =>{
    fetch('https://api.kairos.com/enroll', {
     method:'POST',
     headers:{
