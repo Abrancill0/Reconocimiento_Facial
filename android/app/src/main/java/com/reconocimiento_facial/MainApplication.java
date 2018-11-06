@@ -3,6 +3,14 @@ package com.reconocimiento_facial;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import com.airbnb.android.react.maps.MapsPackage;
+=======
+import com.rnfs.RNFSPackage;
+>>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 import org.reactnative.camera.RNCameraPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +33,14 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            new MapsPackage(),
+=======
+            new RNFSPackage(),
+>>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
             new RNCameraPackage(),
             new VectorIconsPackage()
       );

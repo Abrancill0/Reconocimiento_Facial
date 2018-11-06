@@ -12,7 +12,8 @@ import Registros from './Src/Screen/Registros.js';
 import {createStackNavigator,createSwitchNavigator,createTabNavigator} from 'react-navigation';
 import RegistrarPersona from './Src/Screen/RegistrarPersona.js';
 import RegistrarSalida from './Src/Screen/RegistrarSalida'
-import RegistrarEntrada from './Src/Screen/RegistrarEntrada'
+import RegistrarEntrada from './Src/Screen/RegistrarEntrada';
+import Mapa from './Src/Screen/Map'
 
 const HomeStack = createStackNavigator({
   Inicio:{screen:Inicio,
@@ -44,6 +45,9 @@ const stackNavigatorPrincipal = createStackNavigator(
     navigationOptions:{headerVisible:true}},
   RegistrarSalida:{screen:RegistrarSalida,
     navigationOptions:{headerVisible:true}},
+  Mapa:{screen:Mapa,
+    navigationOptions:{headerVisible:true}},
+    
 })
 
 export default createSwitchNavigator({

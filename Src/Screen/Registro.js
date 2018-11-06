@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, View,Alert} from 'react-native';
+import {StyleSheet, View,Alert,SafeAreaView} from 'react-native';
 import { Button } from 'react-native-elements';
 import RegistrarSalida from './RegistrarSalida'
 
@@ -17,20 +17,22 @@ export default class Registro extends Component {
   
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.Box1}>
-         <Button title='Capturar Modelo' borderRadius={5}
-         onPress={() => this.props.navigation.navigate('RegistrarPersona')}/>
-         </View>
-         <View style={styles.Box1}>
-         <Button title='Registrar Entrada' borderRadius={5}
-         onPress={() => this.props.navigation.navigate('RegistrarEntrada')}/>
-         </View>
-         <View style={styles.Box1}>
-         <Button title='Registrar Salida' borderRadius={5}
-         onPress={() => this.props.navigation.navigate('RegistrarSalida')}/>
+      <SafeAreaView style={{flex:1}}>
+        <View style={styles.container}>
+          <View style={styles.Box1}>
+          <Button title='Capturar Modelo' borderRadius={5}
+          onPress={() => this.props.navigation.navigate('RegistrarPersona')}/>
+          </View>
+          <View style={styles.Box1}>
+          <Button title='Registrar Entrada' borderRadius={5}
+          onPress={() => this.props.navigation.navigate('RegistrarEntrada')}/>
+          </View>
+          <View style={styles.Box1}>
+          <Button title='Registrar Salida' borderRadius={5}
+          onPress={() => this.props.navigation.navigate('RegistrarSalida')}/>
+          </View>
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 
