@@ -1,6 +1,11 @@
 rootProject.name = 'Reconocimiento_Facial'
+<<<<<<< HEAD
 include ':react-native-maps'
 project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
+=======
+include ':react-native-fs'
+project(':react-native-fs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fs/android')
+>>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
 include ':react-native-camera'
 project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
 include ':react-native-vector-icons'

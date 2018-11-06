@@ -4,7 +4,7 @@ import { RNCamera } from 'react-native-camera';
 
 import CaptureButton from './CaptureButton.js'
 
-export default class ComponenteCamara extends Component {
+export default class ComponenteCamara2 extends Component {
     constructor(props){
         super(props);
         this.state = { 
@@ -25,7 +25,7 @@ export default class ComponenteCamara extends Component {
             
             const data = await this.camera.takePictureAsync(options)
 
-            fetch('https://api.kairos.com/enroll', {
+            fetch('https://api.kairos.com/recognize', {
                 method:'POST',
                 headers:{
                 Accept:'application/json',
@@ -33,25 +33,17 @@ export default class ComponenteCamara extends Component {
                 app_key:'dc7743a8fbc533268c0c29dbf037b64b',
                 },
                 body: JSON.stringify({
-                image:data.base64,
-                subject_id:'Prueba2',
+                image:data.uri,
                 gallery_name:'MyGallery'
                 }),
             }).then((response) => response.json())
             .then((responseJson) => {
-
-            if (responseJson.face_id != null)
-            {
-                Alert.alert("Registro creado correctamente");
-            }
-            else
-            {
-                Alert.alert("Error al registrar el rostro");
-            }
-           
+            console.warn(responseJson.images);
+            Alert.alert("Registro creado correctamente");
+            
             })
             .catch((error) => {
-            console.warn(error);  
+            console.error(error);  
         });
             
         }
@@ -78,8 +70,7 @@ export default class ComponenteCamara extends Component {
 
     render() {
         return (
-            <RNCamera ref={ref => {this.camera = ref;}} style={styles.preview}
-            type='front'>
+            <RNCamera ref={ref => {this.camera = ref;}} style={styles.preview}>
             <ActivityIndicator size="large" style={styles.loadingIndicator} color="#fff" animating={this.state.loading}/>
             <CaptureButton buttonDisabled={this.state.loading} onClick={this.takePicture.bind(this)}/>
             </RNCamera>
