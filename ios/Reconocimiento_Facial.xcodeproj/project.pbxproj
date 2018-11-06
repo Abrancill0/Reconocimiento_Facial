@@ -56,10 +56,13 @@
 		4AA970582F7B43F9AD79EB95 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA4D427187254D75B9F85556 /* Zocial.ttf */; };
 		BACB2A97CD7341DF8F2B5849 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 095FDAD999264FCAB1D9A53F /* libRNCamera.a */; };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 		C30BFDE1670F4A22A0AA77FE /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EE4A526D31466685C9C7AD /* libAirMaps.a */; };
 =======
 		164C1354E7294AC490C1C8D7 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECB8936B1A04D2192396C3F /* libRNFS.a */; };
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,12 +389,15 @@
 		A30AFB7761A146F79F7DCDBD /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		095FDAD999264FCAB1D9A53F /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 		5638ECFDE0AD446CB8DCFB6B /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		E6EE4A526D31466685C9C7AD /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 =======
 		82A421B0099F454C999675AC /* RNFS.xcodeproj */ = {isa = PBXFileReference; name = "RNFS.xcodeproj"; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		7ECB8936B1A04D2192396C3F /* libRNFS.a */ = {isa = PBXFileReference; name = "libRNFS.a"; path = "libRNFS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,10 +428,13 @@
 				486FAA65B0B342F5948222BC /* libRNVectorIcons.a in Frameworks */,
 				BACB2A97CD7341DF8F2B5849 /* libRNCamera.a in Frameworks */,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 				C30BFDE1670F4A22A0AA77FE /* libAirMaps.a in Frameworks */,
 =======
 				164C1354E7294AC490C1C8D7 /* libRNFS.a in Frameworks */,
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,10 +625,13 @@
 				62DA49EEBB8249E4A05958BD /* RNVectorIcons.xcodeproj */,
 				A30AFB7761A146F79F7DCDBD /* RNCamera.xcodeproj */,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 				5638ECFDE0AD446CB8DCFB6B /* AirMaps.xcodeproj */,
 =======
 				82A421B0099F454C999675AC /* RNFS.xcodeproj */,
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1289,17 +1301,19 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Debug;
@@ -1324,17 +1338,19 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Release;
@@ -1360,10 +1376,13 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Debug;
@@ -1388,10 +1407,13 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Release;
@@ -1424,17 +1446,19 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Debug;
@@ -1467,17 +1491,19 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Release;
@@ -1509,17 +1535,19 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Debug;
@@ -1551,17 +1579,19 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 =======
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
 				);
 			};
 			name = Release;

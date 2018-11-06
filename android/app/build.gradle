@@ -138,10 +138,13 @@ android {
 
 dependencies {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     compile project(':react-native-maps')
 =======
     compile project(':react-native-fs')
 >>>>>>> 2ef29c7d0bcf2f28fbdd778a4bf78939bfc00d11
+>>>>>>> 1eb19ff6dfc1e6b4fb079bd84f992ea45d8d93f0
     compile project(':react-native-camera')
     compile project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
